@@ -1,11 +1,11 @@
-from fastapi import APIRouter
+from service.hotel_cart_service import cartItemAdd, cartItemRemove, cartGet
 from models.CartItem import CartItem
-from typing import List
 
-router = APIRouter(prefix="/cart", tags=["Cart"])
+def addItemToController(item: CartItem):
+    return cartItemAdd(item)
 
-CART: list[CartItem] = []
+def removeItemInController(item_id: str):
+    return cartItemRemove(item_id)
 
-@router.get("/", response_model=List[CartItem])
-def get_cart():
-    return CART
+def getCartFromController():
+    return cartGet()

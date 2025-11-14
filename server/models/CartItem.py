@@ -1,5 +1,7 @@
 from typing import NamedTuple
-# Элемент корзины (предварительная бронь)
+from pydantic import BaseModel
+
+#immutable model
 class CartItem(NamedTuple):
     id: int  # айди позиции
     hotel_id: int  # айди отеля
@@ -11,4 +13,8 @@ class CartItem(NamedTuple):
 
 
 
-
+#pydantic model
+class CartItem(BaseModel):
+    id: str
+    name: str
+    price: float

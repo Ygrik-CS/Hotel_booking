@@ -1,3 +1,4 @@
+import axios from "axios"
 // Утилиты
 const $ = (s, p = document) => p.querySelector(s);
 const $$ = (s, p = document) => [...p.querySelectorAll(s)];
@@ -143,4 +144,6 @@ $("#sort").addEventListener("change", sortCards);
 // первичная инициализация
 applyFilters();
 // ===== Перенос данных на booking.html =====
+
+
 
