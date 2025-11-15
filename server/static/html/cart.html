@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Hotel Booking</title>
+    <link rel="stylesheet" href="/static/css/cart.css">
+</head>
+<body>
+    <header>
+        <h1>🛒 Shopping Cart</h1>
+        <nav>
+            <a href="/static/html/index.html">Back to Search</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <h2>Your Cart Items</h2>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+                <h3>Summary</h3>
+                <p>Total Items: <span id="total-items">0</span></p>
+                <p>Total Price: <span id="total-price">0</span> UZS</p>
+                <button id="checkout-btn" class="btn-primary">Proceed to Checkout</button>
+                <button id="clear-cart-btn" class="btn-secondary">Clear Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/js/cart.js"></script>
+</body>
+</html>

@@ -1,6 +1,12 @@
-from typing import NamedTuple
-# Правило (ограничение или надбавка)
-class Rule(NamedTuple):
-    id: int  # айди правила
-    kind: str  # тип (min_stay, max_stay и т.д.)
-    payload: dict  # данные правила (например, {"min_days": 2})
+"""Rule model for business rules."""
+from sqlalchemy import Column, Integer, String, Text
+from database.base import Base
+
+
+class Rule(Base):
+    """Business rule model."""
+    __tablename__ = "rules"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    kind = Column(String, nullable=False, index=True)  # min_stay, max_stay, etc.
+    payload = Column(Text)  # JSON string
